@@ -5,10 +5,10 @@ const SidebarProvider = ({ children }) => {
   // Sidebar State
   const [isOpened, setIsOpened] = useState(false)
 
-  const handleOpen = () => {
+  const handleClose = () => {
     setIsOpened(false)
   }
-  return <SidebarContext.Provider value={{ isOpened, setIsOpened, handleOpen }}>{children}</SidebarContext.Provider>;
+  return <SidebarContext.Provider value={{ isOpened, setIsOpened, handleClose }}>{children}</SidebarContext.Provider>;
 };
 
 export default SidebarProvider;
